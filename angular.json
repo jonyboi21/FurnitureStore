@@ -17,6 +17,16 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "rxjs/add/operator/filter",
+              "rxjs/Observable",
+              "rxjs/Subject",
+              "rxjs/add/observable/from",
+              "rxjs/add/operator/debounceTime",
+              "rxjs/add/operator/map",
+              "rxjs/add/operator/mergeMap",
+              "rxjs/add/operator/toArray"
+            ],
             "outputPath": "dist/shoppingfront",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -27,9 +37,12 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {

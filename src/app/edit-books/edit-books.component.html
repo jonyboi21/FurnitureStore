@@ -1,0 +1,146 @@
+
+<br>
+<br>
+<br>
+<br>
+<div class="container bootstrap snippets bootdey">
+  <div class="row ng-scope">
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-body text-center">
+          <div class="pv-lg"><img class="center-block img-responsive img-circle img-thumbnail thumb96" src="{{books.imageUrl}}" alt="Contact"></div>
+          <h3 class="m0 text-bold">{{books.bookName}}</h3>
+          <div class="mv-lg">
+            <p>Make changes to the book here, When finished just press the update button below the form</p>
+          </div>
+          <div class="text-center"><a class="btn btn-danger" style="margin-bottom: 50px" href="">Back to Home</a></div>
+        </div>
+      </div>
+      <!-- <div class="panel panel-default hidden-xs hidden-sm">
+        <div class="panel-heading">
+          <div class="panel-title text-center">Recent contacts</div>
+        </div>
+        <div class="panel-body">
+          <div class="media">
+            <div class="media-left media-middle">
+              <a href="#"><img class="media-object img-circle img-thumbnail thumb48" src="https://bootdey.com/img/Content/avatar/avatar2.png" alt="Contact"></a>
+            </div>
+            <div class="media-body pt-sm">
+              <div class="text-bold">Floyd Ortiz
+                <div class="text-sm text-muted">12m ago</div>
+              </div>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left media-middle">
+              <a href="#"><img class="media-object img-circle img-thumbnail thumb48" src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="Contact"></a>
+            </div>
+            <div class="media-body pt-sm">
+              <div class="text-bold">Luis Vasquez
+                <div class="text-sm text-muted">2h ago</div>
+              </div>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left media-middle">
+              <a href="#"><img class="media-object img-circle img-thumbnail thumb48" src="https://bootdey.com/img/Content/avatar/avatar4.png" alt="Contact"></a>
+            </div>
+            <div class="media-body pt-sm">
+              <div class="text-bold">Duane Mckinney
+                <div class="text-sm text-muted">yesterday</div>
+              </div>
+            </div>
+          </div>
+          <div class="media">
+            <div class="media-left media-middle">
+              <a href="#"><img class="media-object img-circle img-thumbnail thumb48" src="https://bootdey.com/img/Content/avatar/avatar5.png" alt="Contact"></a>
+            </div>
+            <div class="media-body pt-sm">
+              <div class="text-bold">Connie Lambert
+                <div class="text-sm text-muted">2 weeks ago</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div class="col-md-8">
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <div class="pull-right">
+            <div class="btn-group dropdown" uib-dropdown="dropdown">
+              <button class="btn btn-link dropdown-toggle" uib-dropdown-toggle="" aria-haspopup="true" aria-expanded="false"><em class="fa fa-ellipsis-v fa-lg text-muted"></em></button>
+              <ul class="dropdown-menu dropdown-menu-right animated fadeInLeft" role="menu">
+                <li><a href=""><span>Send by message</span></a></li>
+                <li><a href=""><span>Share contact</span></a></li>
+                <li><a href=""><span>Block contact</span></a></li>
+                <li><a href=""><span class="text-warning">Delete contact</span></a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="h4 text-center">Edit Book Properties</div>
+          <div class="row pv-lg">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+              <form class="form-horizontal ng-pristine ng-valid" [formGroup]="bookForm" (ngSubmit)="editBookButton()" >
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="inputContact1">Book Name</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" id="inputContact1" type="text" placeholder="" value="{{books.bookName}}"formControlName="bookName" >
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="inputContact2" >Category</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" id="inputContact2" type="email" value="{{books.categories}}" formControlName="categories">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="inputContact3">Stock</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" id="inputContact3" type="number" value="{{books.inStock}}" formControlName="inStock">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="inputContact4">Price</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" id="inputContact4" type="number" value="{{books.price}}" formControlName="price">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="inputContact5">SKU</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" id="inputContact5" type="text" value="{{books.sku}}" formControlName="sku">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="inputContact6">Description</label>
+                  <div class="col-sm-10">
+                    <textarea class="form-control" id="inputContact6" rows="4" formControlName="description" formGroupName="description" value="{{books.description}}"></textarea>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-sm-2 control-label" for="inputContact7">Image URL</label>
+                  <div class="col-sm-10">
+                    <input class="form-control" id="inputContact7" type="text" value="{{books.imageUrl}}" formControlName="imageUrl">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-offset-2 col-sm-10">
+                    <br>
+=                  </div>
+                </div>
+                <button class="btn btn-success" type="submit">Update</button>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
