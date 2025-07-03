@@ -5,9 +5,10 @@ import {furniture} from "../furniture";
 import {Subscription} from "rxjs";
 
 @Component({
-  selector: 'app-furniture-list',
-  templateUrl: './furniture-list.component.html',
-  styleUrls: ['./furniture-list.component.css']
+    selector: 'app-furniture-list',
+    templateUrl: './furniture-list.component.html',
+    styleUrls: ['./furniture-list.component.css'],
+    standalone: false
 })
 export class furnitureListComponent implements OnInit {
   sub!: Subscription;

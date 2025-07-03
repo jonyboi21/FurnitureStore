@@ -6,9 +6,10 @@ import {DOCUMENT} from "@angular/common";
 import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
-  selector: 'app-edit-furniture',
-  templateUrl: './edit-furniture.component.html',
-  styleUrls: ['./edit-furniture.component.css']
+    selector: 'app-edit-furniture',
+    templateUrl: './edit-furniture.component.html',
+    styleUrls: ['./edit-furniture.component.css'],
+    standalone: false
 })
 export class EditfurnitureComponent implements OnInit {
 

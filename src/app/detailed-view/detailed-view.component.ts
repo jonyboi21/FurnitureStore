@@ -4,9 +4,10 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {furniture} from "../furniture";
 
 @Component({
-  selector: 'app-detailed-view',
-  templateUrl: './detailed-view.component.html',
-  styleUrls: ['./detailed-view.component.css']
+    selector: 'app-detailed-view',
+    templateUrl: './detailed-view.component.html',
+    styleUrls: ['./detailed-view.component.css'],
+    standalone: false
 })
 export class DetailedViewComponent implements OnInit {
 
