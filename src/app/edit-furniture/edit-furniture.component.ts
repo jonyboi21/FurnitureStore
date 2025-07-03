@@ -3,7 +3,7 @@ import {furniture} from "../furniture";
 import {DataService} from "../data.service";
 import {ActivatedRoute} from "@angular/router";
 import {DOCUMENT} from "@angular/common";
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-edit-furniture',
@@ -13,7 +13,7 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class EditfurnitureComponent implements OnInit {
 
   furniture = new furniture();
-  furnitureForm!: FormGroup
+  furnitureForm!: UntypedFormGroup
   constructor(private  data: DataService, private activatedRoute: ActivatedRoute, @Inject(DOCUMENT) private _document: Document) { }
 
 
@@ -24,15 +24,15 @@ export class EditfurnitureComponent implements OnInit {
         this.furniture = response;
       }
     )
-this.furnitureForm = new FormGroup({
-  'id': new FormControl(id),
-  'furnitureName': new FormControl(),
-  'categories': new FormControl(),
-  'price': new FormControl(),
-  'inStock': new FormControl(),
-  'sku': new FormControl(),
-  'description': new FormControl(),
-  'imageUrl': new FormControl()
+this.furnitureForm = new UntypedFormGroup({
+  'id': new UntypedFormControl(id),
+  'furnitureName': new UntypedFormControl(),
+  'categories': new UntypedFormControl(),
+  'price': new UntypedFormControl(),
+  'inStock': new UntypedFormControl(),
+  'sku': new UntypedFormControl(),
+  'description': new UntypedFormControl(),
+  'imageUrl': new UntypedFormControl()
 })
 
   }
