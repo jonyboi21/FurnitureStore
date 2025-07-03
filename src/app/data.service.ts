@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Books} from "./books";
+import {furniture} from "./furniture";
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +10,16 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  fetchBooks(): Observable<Books[]>{
-    return this.http.get<Books[]>(`http://localhost:8080/api/v1/books`)
+  fetchfurniture(): Observable<furniture[]>{
+    return this.http.get<furniture[]>(`http://localhost:8080/api/v1/furniture`)
   }
 
-  fetchBooksById(id: number): Observable<Books> {
-    return this.http.get<Books>(`http://localhost:8080/api/v1/books/${id}`)
+  fetchfurnitureById(id: number): Observable<furniture> {
+    return this.http.get<furniture>(`http://localhost:8080/api/v1/furniture/${id}`)
   }
 
-  updateBook(id: number,books: Books): Observable<Books>{
-    return this.http.put<Books>(`http://localhost:8080/api/v1/books/${id}`, books)
+  updatefurniture(id: number,furniture: furniture): Observable<furniture>{
+    return this.http.put<furniture>(`http://localhost:8080/api/v1/furniture/${id}`, furniture)
   }
 
 

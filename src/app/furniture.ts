@@ -1,7 +1,7 @@
-export class Books{
+export class furniture{
 
   id!: number;
-  bookName!: string;
+  furnitureName!: string;
   categories: any;
   price!: number;
   inStock!: number;

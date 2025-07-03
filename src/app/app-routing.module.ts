@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {BookListComponent} from "./book-list/book-list.component";
+import {furnitureListComponent} from "./furniture-list/furniture-list.component";
 import {DetailedViewComponent} from "./detailed-view/detailed-view.component";
-import {EditBooksComponent} from "./edit-books/edit-books.component";
+import {EditfurnitureComponent} from "./edit-furniture/edit-furniture.component";
 
 const routes: Routes = [
-  {path: 'app-book-list', component: BookListComponent},
+  {path: 'app-furniture-list', component: furnitureListComponent},
   {path: 'app-detailed-view/:id', component: DetailedViewComponent},
-  {path: 'app-edit-books/:id', component: EditBooksComponent},
-  {path: '', component: BookListComponent}
+  {path: 'app-edit-furniture/:id', component: EditfurnitureComponent},
+  {path: '', component: furnitureListComponent}
 ];
 
 @NgModule({

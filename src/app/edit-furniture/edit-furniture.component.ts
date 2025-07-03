@@ -1,32 +1,32 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {Books} from "../books";
+import {furniture} from "../furniture";
 import {DataService} from "../data.service";
 import {ActivatedRoute} from "@angular/router";
 import {DOCUMENT} from "@angular/common";
 import {FormControl, FormGroup} from "@angular/forms";
 
 @Component({
-  selector: 'app-edit-books',
-  templateUrl: './edit-books.component.html',
-  styleUrls: ['./edit-books.component.css']
+  selector: 'app-edit-furniture',
+  templateUrl: './edit-furniture.component.html',
+  styleUrls: ['./edit-furniture.component.css']
 })
-export class EditBooksComponent implements OnInit {
+export class EditfurnitureComponent implements OnInit {
 
-  books = new Books();
-  bookForm!: FormGroup
+  furniture = new furniture();
+  furnitureForm!: FormGroup
   constructor(private  data: DataService, private activatedRoute: ActivatedRoute, @Inject(DOCUMENT) private _document: Document) { }
 
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params[`id`];
-    this.data.fetchBooksById(id).subscribe(
+    this.data.fetchfurnitureById(id).subscribe(
       response => {
-        this.books = response;
+        this.furniture = response;
       }
     )
-this.bookForm = new FormGroup({
+this.furnitureForm = new FormGroup({
   'id': new FormControl(id),
-  'bookName': new FormControl(),
+  'furnitureName': new FormControl(),
   'categories': new FormControl(),
   'price': new FormControl(),
   'inStock': new FormControl(),
@@ -37,10 +37,10 @@ this.bookForm = new FormGroup({
 
   }
 
-  editBookButton(){
+  editfurnitureButton(){
     const id = this.activatedRoute.snapshot.params[`id`]
 
-    this.data.updateBook(id, this.bookForm.getRawValue())
+    this.data.updatefurniture(id, this.furnitureForm.getRawValue())
       .subscribe(
         response =>{
           // @ts-ignore

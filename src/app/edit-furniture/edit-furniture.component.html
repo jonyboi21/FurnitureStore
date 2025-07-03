@@ -8,10 +8,10 @@
     <div class="col-md-4">
       <div class="panel panel-default">
         <div class="panel-body text-center">
-          <div class="pv-lg"><img class="center-block img-responsive img-circle img-thumbnail thumb96" src="{{books.imageUrl}}" alt="Contact"></div>
-          <h3 class="m0 text-bold">{{books.bookName}}</h3>
+          <div class="pv-lg"><img class="center-block img-responsive img-circle img-thumbnail thumb96" src="{{furniture.imageUrl}}" alt="Contact"></div>
+          <h3 class="m0 text-bold">{{furniture.furnitureName}}</h3>
           <div class="mv-lg">
-            <p>Make changes to the book here, When finished just press the update button below the form</p>
+            <p>Make changes to the furniture here, When finished just press the update button below the form</p>
           </div>
           <div class="text-center"><a class="btn btn-danger" style="margin-bottom: 50px" href="">Back to Home</a></div>
         </div>
@@ -78,51 +78,51 @@
               </ul>
             </div>
           </div>
-          <div class="h4 text-center">Edit Book Properties</div>
+          <div class="h4 text-center">Edit furniture Properties</div>
           <div class="row pv-lg">
             <div class="col-lg-2"></div>
             <div class="col-lg-8">
-              <form class="form-horizontal ng-pristine ng-valid" [formGroup]="bookForm" (ngSubmit)="editBookButton()" >
+              <form class="form-horizontal ng-pristine ng-valid" [formGroup]="furnitureForm" (ngSubmit)="editfurnitureButton()" >
                 <div class="form-group">
-                  <label class="col-sm-2 control-label" for="inputContact1">Book Name</label>
+                  <label class="col-sm-2 control-label" for="inputContact1">furniture Name</label>
                   <div class="col-sm-10">
-                    <input class="form-control" id="inputContact1" type="text" placeholder="" value="{{books.bookName}}"formControlName="bookName" >
+                    <input class="form-control" id="inputContact1" type="text" placeholder="" value="{{furniture.furnitureName}}"formControlName="furnitureName" >
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="inputContact2" >Category</label>
                   <div class="col-sm-10">
-                    <input class="form-control" id="inputContact2" type="email" value="{{books.categories}}" formControlName="categories">
+                    <input class="form-control" id="inputContact2" type="email" value="{{furniture.categories}}" formControlName="categories">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="inputContact3">Stock</label>
                   <div class="col-sm-10">
-                    <input class="form-control" id="inputContact3" type="number" value="{{books.inStock}}" formControlName="inStock">
+                    <input class="form-control" id="inputContact3" type="number" value="{{furniture.inStock}}" formControlName="inStock">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="inputContact4">Price</label>
                   <div class="col-sm-10">
-                    <input class="form-control" id="inputContact4" type="number" value="{{books.price}}" formControlName="price">
+                    <input class="form-control" id="inputContact4" type="number" value="{{furniture.price}}" formControlName="price">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="inputContact5">SKU</label>
                   <div class="col-sm-10">
-                    <input class="form-control" id="inputContact5" type="text" value="{{books.sku}}" formControlName="sku">
+                    <input class="form-control" id="inputContact5" type="text" value="{{furniture.sku}}" formControlName="sku">
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="inputContact6">Description</label>
                   <div class="col-sm-10">
-                    <textarea class="form-control" id="inputContact6" rows="4" formControlName="description" formGroupName="description" value="{{books.description}}"></textarea>
+                    <textarea class="form-control" id="inputContact6" rows="4" formControlName="description" formGroupName="description" value="{{furniture.description}}"></textarea>
                   </div>
                 </div>
                 <div class="form-group">
                   <label class="col-sm-2 control-label" for="inputContact7">Image URL</label>
                   <div class="col-sm-10">
-                    <input class="form-control" id="inputContact7" type="text" value="{{books.imageUrl}}" formControlName="imageUrl">
+                    <input class="form-control" id="inputContact7" type="text" value="{{furniture.imageUrl}}" formControlName="imageUrl">
                   </div>
                 </div>
                 <div class="form-group">

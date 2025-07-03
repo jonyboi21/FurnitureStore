@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../data.service";
 import {ActivatedRoute, Router} from "@angular/router";
-import {Books} from "../books";
+import {furniture} from "../furniture";
 
 @Component({
   selector: 'app-detailed-view',
@@ -10,39 +10,39 @@ import {Books} from "../books";
 })
 export class DetailedViewComponent implements OnInit {
 
-  booksList: Books[] = [];
+  furnitureList: furniture[] = [];
 
-  filteredList: Books[] = [];
+  filteredList: furniture[] = [];
   private _listFilter: string = '';
   get listFilter(): string {
     return this._listFilter;
   }
 
-  book = new Books();
+  furniture = new furniture();
 
   constructor(private data: DataService, private activatedRoute: ActivatedRoute,private router: Router) { }
 
   ngOnInit(): void {
     const id = this.activatedRoute.snapshot.params[`id`];
-    this.data.fetchBooksById(id).subscribe(
+    this.data.fetchfurnitureById(id).subscribe(
       response =>{
-        this.book = response;
+        this.furniture = response;
       }, error => console.log(error)
     )
   }
 
-  private performNameFilter(FilterBy: string): Books[] {
+  private performNameFilter(FilterBy: string): furniture[] {
     FilterBy = FilterBy.toLocaleLowerCase();
-    return this.booksList.filter((book: Books) =>
-      book.categories.includes(FilterBy.toUpperCase()));
+    return this.furnitureList.filter((furniture: furniture) =>
+      furniture.categories.includes(FilterBy.toUpperCase()));
   }
 
 
-  getAllBooks(){
-    this.data.fetchBooks().subscribe(
+  getAllfurniture(){
+    this.data.fetchfurniture().subscribe(
       response =>{
-        this.booksList = response;
-        console.log(this.booksList)
+        this.furnitureList = response;
+        console.log(this.furnitureList)
       }
     )
   }

@@ -1,20 +1,20 @@
 <section class="py-5">
   <div class="container px-4 px-lg-5 my-5">
     <div class="row gx-4 gx-lg-5 align-items-center">
-      <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{book.imageUrl}}" alt="..." /></div>
+      <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{furniture.imageUrl}}" alt="..." /></div>
       <div class="col-md-6">
-        <div class="small mb-1">SKU: {{book.sku}}</div>
-        <h1 class="display-5 fw-bolder">{{book.bookName}}</h1>
+        <div class="small mb-1">SKU: {{furniture.sku}}</div>
+        <h1 class="display-5 fw-bolder">{{furniture.furnitureName}}</h1>
         <div class="fs-5 mb-5">
           <div>
             <strong>Buy Now For Discounted Price</strong>
           </div>
-          <span class="text-decoration-line-through">{{book.price | currency}}</span>
-          <span>{{book.price + book.price*.10 | currency}}</span>
+          <span class="text-decoration-line-through">{{furniture.price | currency}}</span>
+          <span>{{furniture.price + furniture.price*.10 | currency}}</span>
           <br>
-          <span>{{book.inStock | number}} : Left in Stock! </span>
+          <span>{{furniture.inStock | number}} : Left in Stock! </span>
         </div>
-        <p class="lead">{{book.description}}</p>
+        <p class="lead">{{furniture.description}}</p>
         <div class="d-flex">
           <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 3rem" />
           <button class="btn btn-outline-dark flex-shrink-0" type="button">
@@ -25,7 +25,7 @@
       </div>
     </div>
   </div>
-  <button class="btn btn-success" id="BackButton" routerLink="/app-book-list">Go Back</button>
+  <button class="btn btn-success" id="BackButton" routerLink="/app-furniture-list">Go Back</button>
 </section>
 <!-- Related items section-->
 <section class="py-5 bg-light">
